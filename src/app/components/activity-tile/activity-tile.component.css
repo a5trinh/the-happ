@@ -1,0 +1,8 @@
+.activity-tile{
+    background-image: url(http://lorempixel.com/200/180/);
+   background-size: cover;
+    background-repeat:no-repeat;
+    height: 250px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
