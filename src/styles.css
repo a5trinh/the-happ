@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .main-bg{
-    background-color: #5ca3fa;;
+    background-color:rgb(255, 252, 247);
 background-image: url("./assets/food.png");
 min-height: 1400px;
 }

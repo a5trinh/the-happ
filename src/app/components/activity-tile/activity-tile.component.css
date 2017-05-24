@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .activity-tile{
     background-image: url(http://lorempixel.com/200/180/);
    background-size: cover;
@@ -5,4 +6,13 @@
     height: 250px;
     margin-bottom: 15px;
     margin-top: 15px;
+=======
+.tile{
+    background:#31df35;
+    color:#fff;
+    padding:20px;
+    margin: 5px 0;
+    height: 175px;
+    width: 100%;
+>>>>>>> d04f44dddf8897721c3c007f193fbc44c6df5648
 }
