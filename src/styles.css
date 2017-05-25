@@ -5,6 +5,10 @@ background-image: url("./assets/food.png");
 min-height: 1400px;
 }
 
+.p-all-5{
+	padding:5px;
+}
+
 /*ANIMATIONS*/
 
 /* ----------------------------------------------

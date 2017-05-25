@@ -2,8 +2,17 @@
     background:#31df35;
     color:#fff;
     padding:20px;
-    margin: 5px 0;
-    height: 175px;
+    height: 400px;
     width: 100%;
 
+}
+
+.tile .header{
+    height: 200px;
+    width:inherit;
+}
+
+.tile .description{
+    height: 200px;
+    width:inherit;
 }
