@@ -1,18 +1,30 @@
 .tile{
-    background:#31df35;
-    color:#fff;
-    padding:20px;
+    background:#fafafa;
+    color:#000; 
     height: 400px;
     width: 100%;
-
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .tile .header{
     height: 200px;
     width:inherit;
+    background-image:url(http://lorempixel.com/500/200/food/);
+     padding:20px;
+     background-size:cover;
+}
+
+.tile .title{
+    height: 60px;
+    padding:10px 20px;
 }
 
 .tile .description{
-    height: 200px;
+    height: 140px;
     width:inherit;
+      padding:10px 20px;
+}
+
+.bar{
+    border-top: 1px solid #dddddd;
 }

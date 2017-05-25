@@ -18,8 +18,7 @@ const DUMMYDATA = [
 @Component({
   selector: 'activity-tiles-container',
   templateUrl: './activity-tiles-container.component.html',
-  styleUrls: ['./activity-tiles-container.component.css'],
-  providers: []
+  styleUrls: ['./activity-tiles-container.component.css']
 })
 
 export class ActivityTilesContainerComponent {
