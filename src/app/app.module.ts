@@ -11,9 +11,13 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { ActivityTilesContainerComponent } from './components/activity-tiles-container/activity-tiles-container.component'
 import { ActivityTileComponent } from './components/activity-tile/activity-tile.component'
+import { ActivityTileDetailsComponent } from './components/activity-tile-details/activity-tile-details.component'
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent }
+  {
+    path: '', component: DashboardComponent
+  },
+  { path: 'activity/:id', component: ActivityTileDetailsComponent }
 ]
 
 @NgModule({
@@ -21,7 +25,8 @@ const routes: Routes = [
     AppComponent,
     DashboardComponent,
     ActivityTilesContainerComponent,
-    ActivityTileComponent
+    ActivityTileComponent,
+    ActivityTileDetailsComponent
   ],
   imports: [
     BrowserModule,
