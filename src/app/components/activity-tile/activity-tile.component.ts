@@ -7,5 +7,5 @@ import {Component,Input} from '@angular/core';
 })
 
 export class ActivityTileComponent{
-    @Input('activityDetails') details;
+    @Input('activityDetails') activity;
 }

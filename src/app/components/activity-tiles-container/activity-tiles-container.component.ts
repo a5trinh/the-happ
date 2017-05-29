@@ -1,20 +1,6 @@
-import { Component } from '@angular/core';
-
-
-const DUMMYDATA = [
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' },
-  { location: '1 Front St E, Toronto, ON M5E 1B2', time: 'Saturday, December 2 at 8 PM' }
-];
+import { Component, OnInit } from '@angular/core';
+import { ActivityService } from '../../shared/activity.service';
+import { Activity } from '../../shared/classes/activity';
 
 @Component({
   selector: 'activity-tiles-container',
@@ -22,8 +8,17 @@ const DUMMYDATA = [
   styleUrls: ['./activity-tiles-container.component.css']
 })
 
-export class ActivityTilesContainerComponent {
-  first = 0;
-  last = 4;
-  dummyData = DUMMYDATA;
+export class ActivityTilesContainerComponent implements OnInit {
+
+  activities: Activity[];
+
+  constructor(private activityService: ActivityService) {
+
+  }
+
+  ngOnInit(): void {
+    this.activityService.getActivties().then(activities => this.activities = activities);
+  }
+
+
 }

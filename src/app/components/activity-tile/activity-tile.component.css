@@ -1,13 +1,16 @@
 .tile {
-  background: #fafafa;
+  background: #fff;
   color: #000;
   height: 400px;
   width: 100%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .tile .header {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   height: 200px;
   width: inherit;
   background-image: url(http://lorempixel.com/500/200/food/);

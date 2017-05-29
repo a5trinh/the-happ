@@ -8,10 +8,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 //Component Imports
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component'
-import { ActivityTilesContainerComponent } from './components/activity-tiles-container/activity-tiles-container.component'
-import { ActivityTileComponent } from './components/activity-tile/activity-tile.component'
-import { ActivityTileDetailsComponent } from './components/activity-tile-details/activity-tile-details.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ActivityTilesContainerComponent } from './components/activity-tiles-container/activity-tiles-container.component';
+import { ActivityTileComponent } from './components/activity-tile/activity-tile.component';
+import { ActivityTileDetailsComponent } from './components/activity-tile-details/activity-tile-details.component';
+
+//Service Imports
+import { ActivityService } from './shared/activity.service';
 
 const routes: Routes = [
   {
@@ -35,7 +38,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ActivityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
