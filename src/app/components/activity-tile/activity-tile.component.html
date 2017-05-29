@@ -1,6 +1,7 @@
-<div class="tile scale-in-center" [routerLink]="['/activity',activity.id]" >
-  <div class="header">
-
+<div class="tile" [routerLink]="['/activity',activity.id]" >
+  <div class="header text-center">
+    <img src="{{activity.mainImage}}" *ngIf="activity.mainImage"> 
+    <i class="fa fa-star-o fa-5x fa-border mt-40"></i>
   </div>
   <div class="title">
     <h2>{{activity.title}}</h2>
