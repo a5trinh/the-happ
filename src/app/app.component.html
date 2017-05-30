@@ -1,9 +1,39 @@
-<nav class="navbar fix-top bg-success text-white ">
-   <a class="navbar-brand text-white" routerLink=""><i class="fa fa-star-o fa-border"></i> {{title}}</a>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-success ">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand text-white" routerLink=""><i class="fa fa-star-o fa-border"></i> TheHapps</a>
+
+  <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-success pointer"><i class="fa fa-user fa-lg text-white"></i></button>
+  </div>
 </nav>
 <div class="container">
   <router-outlet></router-outlet>
-  <hr>   
+  <hr>
   <footer>
     <p class="text-center">The Happs</p>
   </footer>

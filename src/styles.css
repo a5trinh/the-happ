@@ -6,7 +6,7 @@
 }
 
 .main-header {
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
 }
 
@@ -30,8 +30,20 @@
                                   supported by Chrome and Opera */
 }
 
+.pointer{
+  cursor: pointer;
+}
+
+.p-none{
+  padding:0;
+}
+
 .p-all-5 {
   padding: 5px;
+}
+
+.p-all-15 {
+  padding: 15px;
 }
 
 .pv-10 {
@@ -55,6 +67,9 @@ footer {
   background: transparent;
 }
 
+.bg-white{
+  background-color:#fff; 
+}
 
 /*ANIMATIONS*/
 

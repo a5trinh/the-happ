@@ -1,0 +1,9 @@
+.details-main {
+  height: 350px;
+  overflow:hidden;
+}
+
+.details-main img {
+  width: 100%;
+  height: auto;
+}

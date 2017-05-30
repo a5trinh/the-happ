@@ -1,4 +1,4 @@
-export interface Activity {
+export class Activity {
     title: String
     location: String
     time: Date
