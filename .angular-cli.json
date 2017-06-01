@@ -19,11 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "css/bootstrap.css",
-        "css/bootstrap-reboot.css",
-        "css/bootstrap-grid.css",
-        "css/font-awesome.css",
-        "styles.css"
+        "assets/css/bootstrap.css",
+        "assets/css/bootstrap-reboot.css",
+        "assets/css/bootstrap-grid.css",
+        "assets/css/font-awesome.css",
+        "assets/css/styles.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
