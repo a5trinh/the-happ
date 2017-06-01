@@ -1,9 +1,9 @@
 export class Activity {
-    title: String
-    location: String
+    title: string
+    location: string
     time: Date
-    catergory: String
+    catergory: string
     id: Number
-    description?:String
-    mainImage?:String
+    description?:string
+    mainImage?:string
 }

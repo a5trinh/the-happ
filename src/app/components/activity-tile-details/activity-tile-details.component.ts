@@ -3,6 +3,7 @@ import { ActivityService } from '../../shared/activity.service';
 import { Activity } from '../../shared/classes/activity'
 import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/finally';
 
 @Component({
     selector: 'activity-tile-details',
@@ -18,18 +19,34 @@ export class ActivityTileDetailsComponent implements OnInit {
         catergory: '',
         id: null
     }
-    lat: number=0;
-    long: number=0;
+    lat: number = 50;
+    long: number = 30;
     constructor(private activityService: ActivityService, private route: ActivatedRoute) { }
 
     ngOnInit(): void {
+        window.scrollTo(0,0);
         this.route.params
-            .switchMap((params: Params) => this.activityService.getActivity(+params['id'])).subscribe(activity => this.activity = activity);
+            .switchMap((params: Params) => this.activityService.getActivity(+params['id']))
+            .subscribe(
+            (activity) => {
+                this.activity = activity
+                this.setGeolocation();
+            },
+            error => console.log(error)
+            );
     }
 
-    setGeolocation():void{
-       //Call service that will make request to Google geolocation API for long and lat values
-       //sample request https://maps.googleapis.com/maps/api/geocode/json?address=1%20Front%20St%20E,%20Toronto,%20ON%20M5E%201B2&key=AIzaSyAIfvS8oYnjYrFYESl4WO1kMzQtWldKSZQ
+    setGeolocation(): void {
+        console.log('run');
+        //Call service that will make request to Google geolocation API for long and lat values
+        this.activityService.getGeolocation(this.activity.location).subscribe(
+            res => {
+                let data= JSON.parse(res._body)
+                this.lat=data.results[0].geometry.location.lat;
+                this.long=data.results[0].geometry.location.lng;
+                },
+            error => console.log(error)
+        );
     }
 
 
