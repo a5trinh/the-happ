@@ -5,14 +5,18 @@
   </div>
 </div>
 <div class="row bg-white">
-  <div class="col-sm-6 p-none details-main">
+  <div class="col-lg-6 p-none details-main col-12">
     <img src="{{activity.mainImage}}">
   </div>
-  <div class="col-sm-6 p-none">
-    <div class="col-sm-6 p-none"><img src="{{activity.mainImage}}"></div>
-    <div class="col-sm-6 p-none"><img src="{{activity.mainImage}}"></div>
-    <div class="col-sm-6 p-none"><img src="{{activity.mainImage}}"></div>
-    <div class="col-sm-6 p-none"><img src="{{activity.mainImage}}"></div>
+  <div class="col-lg-6 p-none details-sidebar col-12">
+    <div class="row m-none">
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
+    
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
+    </div>
+
   </div>
 </div>
 
@@ -27,8 +31,8 @@
       (injected humour and the like).</p>
   </div>
   <div class="col-xl-4 p-all-15">
-    <p>{{activity.time}}</p>
+    <p><i class="fa fa-clock-o" aria-hidden="true"></i> {{activity.time}}</p>
     <hr>
-    <p>{{activity.location}}</p>
+    <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{activity.location}}</p>
   </div>
 </div>

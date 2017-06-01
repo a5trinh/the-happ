@@ -7,7 +7,7 @@ export const Activities: Activity[] = [
         time: new Date("February 4, 2016 10:13"),
         catergory: 'music',
         id: 1,
-        mainImage:'http://lorempixel.com/500/350/food/'
+        mainImage:'http://lorempixel.com/570/400/food/'
         
     },
     {

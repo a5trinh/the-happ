@@ -1,9 +1,22 @@
 .details-main {
-  height: 350px;
-  overflow:hidden;
+ 
+  overflow:hidden;  
 }
 
 .details-main img {
+  max-height: 400px;
   width: 100%;
   height: auto;
+}
+
+
+.details-sidebar .row{
+  overflow: hidden;
+}
+
+.details-sidebar img{
+    width: 100%;
+  height: auto;
+  max-height: 200px;
+  float:left;
 }

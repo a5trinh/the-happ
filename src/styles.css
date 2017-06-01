@@ -55,6 +55,10 @@
   margin-top: 40px;
 }
 
+.m-none{
+  margin:0;
+}
+
 .bar {
   border-top: 1px solid #dddddd;
 }
