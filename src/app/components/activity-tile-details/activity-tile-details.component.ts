@@ -29,6 +29,7 @@ export class ActivityTileDetailsComponent implements OnInit {
 
     setGeolocation():void{
        //Call service that will make request to Google geolocation API for long and lat values
+       //sample request https://maps.googleapis.com/maps/api/geocode/json?address=1%20Front%20St%20E,%20Toronto,%20ON%20M5E%201B2&key=AIzaSyAIfvS8oYnjYrFYESl4WO1kMzQtWldKSZQ
     }
 
 
