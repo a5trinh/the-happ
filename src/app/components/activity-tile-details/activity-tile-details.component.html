@@ -6,15 +6,15 @@
 </div>
 <div class="row bg-white">
   <div class="col-lg-6 p-none details-main col-12">
-    <img src="{{activity.mainImage}}">
+    <img src="{{activity.mainImage}}" onError="this.src='http://lorempixel.com/570/400/cats/'">
   </div>
   <div class="col-lg-6 p-none details-sidebar col-12">
     <div class="row m-none">
-      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
-      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
-    
-      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
-      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}"></div>
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}" onError="this.src='http://lorempixel.com/570/400/cats/'"></div>
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}" onError="this.src='http://lorempixel.com/570/400/cats/'"></div>
+
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}" onError="this.src='http://lorempixel.com/570/400/cats/'"></div>
+      <div class="col-md-3 col-lg-6 p-none col-6"><img src="{{activity.mainImage}}" onError="this.src='http://lorempixel.com/570/400/cats/'"></div>
     </div>
 
   </div>
@@ -35,4 +35,12 @@
     <hr>
     <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{activity.location}}</p>
   </div>
+</div>
+<div class="row">
+  <div class="col-12 p-none">
+    <agm-map [latitude]="lat" [longitude]="long" [zoom]="8">
+      <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+    </agm-map>
+  </div>
+
 </div>

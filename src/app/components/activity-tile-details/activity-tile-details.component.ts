@@ -18,13 +18,18 @@ export class ActivityTileDetailsComponent implements OnInit {
         catergory: '',
         id: null
     }
-
+    lat: number=0;
+    long: number=0;
     constructor(private activityService: ActivityService, private route: ActivatedRoute) { }
 
     ngOnInit(): void {
         this.route.params
             .switchMap((params: Params) => this.activityService.getActivity(+params['id'])).subscribe(activity => this.activity = activity);
-
     }
+
+    setGeolocation():void{
+       //Call service that will make request to Google geolocation API for long and lat values
+    }
+
 
 }
