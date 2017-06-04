@@ -13,6 +13,8 @@ import { ActivityTilesContainerComponent } from './components/activity-tiles-con
 import { ActivityTileComponent } from './components/activity-tile/activity-tile.component';
 import { ActivityTileDetailsComponent } from './components/activity-tile-details/activity-tile-details.component';
 
+//Pipe Imports
+import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 //Service Imports
 import { ActivityService } from './shared/activity.service';
 
@@ -29,7 +31,8 @@ const routes: Routes = [
     DashboardComponent,
     ActivityTilesContainerComponent,
     ActivityTileComponent,
-    ActivityTileDetailsComponent
+    ActivityTileDetailsComponent,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,

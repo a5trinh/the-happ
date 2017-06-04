@@ -16,7 +16,7 @@ export class ActivityTileDetailsComponent implements OnInit {
         title: '',
         location: '',
         time: new Date(''),
-        catergory: '',
+        category: '',
         id: null
     }
     lat: number = 50;
