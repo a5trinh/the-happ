@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Activities } from './mock-data';
+import { Activities } from '../shared/mock-data';
 import { Http, Response } from '@angular/http';
-import { Activity } from './classes/activity';
+import { Activity } from '../shared/classes/activity';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';

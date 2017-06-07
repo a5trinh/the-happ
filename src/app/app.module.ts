@@ -16,7 +16,7 @@ import { ActivityTileDetailsComponent } from './components/activity-tile-details
 //Pipe Imports
 import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 //Service Imports
-import { ActivityService } from './shared/activity.service';
+import { ActivityService } from './services/activity.service';
 
 const routes: Routes = [
   {

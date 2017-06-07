@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
-import { ActivityService } from '../../shared/activity.service';
+import { ActivityService } from '../../services/activity.service';
 import { Activity } from '../../shared/classes/activity'
 import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';

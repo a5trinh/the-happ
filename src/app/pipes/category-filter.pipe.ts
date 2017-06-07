@@ -6,11 +6,11 @@ import { Activity } from '../shared/classes/activity';
 })
 
 export class CategoryFilterPipe implements PipeTransform {
-    categories = ['dining','music'];
+    categories = ['dining', 'music','outdoors'];
 
     transform(activities) {
-        console.log(activities)
-      //Return null if no activities exist, since data is asynchronous 
+
+        //Return null if no activities exist, since data is asynchronous 
         if (activities == null) {
             return null;
         }
@@ -19,7 +19,7 @@ export class CategoryFilterPipe implements PipeTransform {
                 return activity;
             }
         })
-         console.log('initialized')
+
         return results;
 
     }
