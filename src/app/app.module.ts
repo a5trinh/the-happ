@@ -20,7 +20,7 @@ import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 //Service Imports
 import { ActivityService } from './services/activity.service';
 
-import {reducers} from './reducers'
+import {reducer} from './reducers'
 
 const routes: Routes = [
   {
@@ -44,7 +44,7 @@ const routes: Routes = [
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(routes),
-    StoreModule.provideStore(reducers),
+    StoreModule.provideStore(reducer),
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAIfvS8oYnjYrFYESl4WO1kMzQtWldKSZQ'
