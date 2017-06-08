@@ -6,6 +6,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
+import {StoreModule } from '@ngrx/store';
+
 //Component Imports
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -17,6 +19,8 @@ import { ActivityTileDetailsComponent } from './components/activity-tile-details
 import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 //Service Imports
 import { ActivityService } from './services/activity.service';
+
+import {reducers} from './reducers'
 
 const routes: Routes = [
   {
@@ -40,6 +44,7 @@ const routes: Routes = [
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(routes),
+    StoreModule.provideStore(reducers),
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAIfvS8oYnjYrFYESl4WO1kMzQtWldKSZQ'
