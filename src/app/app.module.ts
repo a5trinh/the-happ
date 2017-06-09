@@ -14,6 +14,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ActivityTilesContainerComponent } from './components/activity-tiles-container/activity-tiles-container.component';
 import { ActivityTileComponent } from './components/activity-tile/activity-tile.component';
 import { ActivityTileDetailsComponent } from './components/activity-tile-details/activity-tile-details.component';
+import { CategoryFilterComponent} from './components/category-filter/category-filter.component';
 
 //Pipe Imports
 import { CategoryFilterPipe } from './pipes/category-filter.pipe';
@@ -36,7 +37,8 @@ const routes: Routes = [
     ActivityTilesContainerComponent,
     ActivityTileComponent,
     ActivityTileDetailsComponent,
-    CategoryFilterPipe
+    CategoryFilterPipe,
+    CategoryFilterComponent
   ],
   imports: [
     BrowserModule,

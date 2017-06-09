@@ -9,9 +9,28 @@ export const initialState: State = {
 }
 
 export function reducer(state = initialState, action: filter.Actions): State {
-    
-    //add switch statements to handle actions
-    return state
+    switch (action.type) {
+        case filter.ADD_FILTER: {
+            console.log({
+                categoryFilter: [...state.categoryFilter, action.payload] //add payload to existing filters
+            });
+            return {
+                categoryFilter: [...state.categoryFilter, action.payload] //add payload to existing filters
+            }
+        }
+        case filter.REMOVE_FILTER: {
+            console.log(filter.REMOVE_FILTER);
+            return {
+                categoryFilter: state.categoryFilter.filter((filter) => { //return only filters that do not match payload
+                    if (filter != action.payload) {
+                        return filter;
+                    }
+                })
+            }
+        }
+        default: return state //if none of the action types provided match, return initial state
+    }
+
 }
 
 export const getFilters = (state: State) => state.categoryFilter;
