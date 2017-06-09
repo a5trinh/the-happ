@@ -5,39 +5,34 @@ import * as fromRoot from '../reducers';
 import { Observable } from 'rxjs/Observable';
 
 @Pipe({
-    name: 'categoryFilter'
+    name: 'categoryFilter',
+    pure: false
 })
 
 export class CategoryFilterPipe implements PipeTransform {
-    categories: Observable<string[]>;
+    categories: string[];
     constructor(private store: Store<fromRoot.State>) {
         //binding store values to directive
-        this.categories = store.select(fromRoot.getFilters)
+        store.select(fromRoot.getFilters).subscribe((filters) => {
+            this.categories = filters;
+        })
     }
 
     transform(activities) {
         //Return null if no activities exist, since data is asynchronous 
-        console.log(activities);
         if (activities == null) {
             return null;
         }
-        let results = activities.filter((activity) => {
+        let results = []
+        results = [...(activities.filter((activity) => {
             let match = false;
-            this.categories.subscribe((categories) => {
-                categories.forEach((category) => {
-                    if (activity.category == category) {
-                        match = true;
-                    }
-                })
-
+            this.categories.forEach((category) => {
+                if (activity.category == category) {
+                    match = true;
+                }
             })
-            return match
-        })
-
+            return match;
+        }))]
         return results;
-
-
     }
-
-
 }

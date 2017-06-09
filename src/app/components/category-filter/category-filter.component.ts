@@ -10,15 +10,28 @@ import * as filter from '../../actions/filter';
 })
 
 export class CategoryFilterComponent {
-    constructor(private store: Store<fromRoot.State>) {
 
+    stateFilters: string[]
+    componentFilters: any[]
+
+    constructor(private store: Store<fromRoot.State>) {
+        this.store.select(fromRoot.getFilters).subscribe((filters) => {
+            this.stateFilters = filters;
+        })
+
+        this.componentFilters = [
+            {
+                name: "",
+                active: true
+            }
+        ]
     }
 
-    addFilter(filterName:string){
+    addFilter(filterName: string) {
         this.store.dispatch(new filter.AddAction(filterName)) //Dispatch a new action defined by imported filter Action. Actions are only objects with a type and payload
     }
-    
-    removeFilter(filterName:string){
-         this.store.dispatch(new filter.RemoveAction(filterName))
+
+    removeFilter(filterName: string) {
+        this.store.dispatch(new filter.RemoveAction(filterName))
     }
 }

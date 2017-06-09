@@ -21,7 +21,7 @@ export const Activities: Activity[] = [
         title: 'Some Event 3',
         location: '3 Front St E, Toronto, ON M5E 1B2',
         time: new Date("February 4, 2016 10:13"),
-        category: 'active',
+        category: 'music',
         id: 3
     },
     {
@@ -35,7 +35,7 @@ export const Activities: Activity[] = [
         title: 'Some Event 5',
         location: '1 Front St E, Toronto, ON M5E 1B2',
         time: new Date("February 4, 2016 10:13"),
-        category: 'test',
+        category: 'active',
         id: 5
     },
     {
@@ -77,7 +77,7 @@ export const Activities: Activity[] = [
         title: 'Some Event 11',
         location: '1 Front St E, Toronto, ON M5E 1B2',
         time: new Date("February 4, 2016 10:13"),
-        category: 'test',
+        category: 'sport',
         id: 11
     },
     {

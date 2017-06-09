@@ -5,15 +5,13 @@ export interface State {
 }
 
 export const initialState: State = {
-    categoryFilter: ['music']
+    categoryFilter: ['music', 'dining', 'sport', 'outdoors', 'shopping', 'gamings', 'active']
 }
 
 export function reducer(state = initialState, action: filter.Actions): State {
     switch (action.type) {
-        case filter.ADD_FILTER: {
-            console.log({
-                categoryFilter: [...state.categoryFilter, action.payload] //add payload to existing filters
-            });
+        case filter.ADD_FILTER: {    //add payload to existing filters
+            console.log(filter.ADD_FILTER);
             return {
                 categoryFilter: [...state.categoryFilter, action.payload] //add payload to existing filters
             }

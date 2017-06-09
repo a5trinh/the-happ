@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
 
+//action type defined string values
 export const ADD_FILTER = '[Filter] Added';
 export const REMOVE_FILTER = '[Filter] Removed';
 
