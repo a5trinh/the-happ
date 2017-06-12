@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromRoot from '../../reducers';
 import * as filter from '../../actions/filter';
+import { Category } from '../../models/category';
 
 @Component({
     selector: 'category-filter',
@@ -11,7 +12,7 @@ import * as filter from '../../actions/filter';
 
 export class CategoryFilterComponent {
 
-    stateFilters: string[]
+    stateFilters: Category[]
     componentFilters: any[]
 
     constructor(private store: Store<fromRoot.State>) {
@@ -27,11 +28,17 @@ export class CategoryFilterComponent {
         ]
     }
 
-    addFilter(filterName: string) {
-        this.store.dispatch(new filter.AddAction(filterName)) //Dispatch a new action defined by imported filter Action. Actions are only objects with a type and payload
+    activateFilter(filterName: string) {
+        this.store.dispatch(new filter.ActivateAction({
+            name: filterName,
+            isActive: false
+        })) //Dispatch a new action defined by imported filter Action. Actions are only objects with a type and payload
     }
 
-    removeFilter(filterName: string) {
-        this.store.dispatch(new filter.RemoveAction(filterName))
+    disableFilter(filterName: string) {
+        this.store.dispatch(new filter.DisableAction({
+            name: filterName,
+            isActive: true
+        }))
     }
 }

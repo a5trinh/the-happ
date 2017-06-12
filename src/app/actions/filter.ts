@@ -1,8 +1,8 @@
 import { Action } from '@ngrx/store';
-
+import { Category } from '../models/category';
 //action type defined string values
-export const ADD_FILTER = '[Filter] Added';
-export const REMOVE_FILTER = '[Filter] Removed';
+export const ACTIVATE_FILTER = '[Filter] Activated';
+export const DISABLE_FILTER = '[Filter] Disabled';
 
 /**
  * Every action is comprised of at least a type and an optional
@@ -11,16 +11,16 @@ export const REMOVE_FILTER = '[Filter] Removed';
  *
  * See Discriminated Unions: https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions
  */
-export class AddAction implements Action {
-    readonly type = ADD_FILTER;
+export class ActivateAction implements Action {
+    readonly type = ACTIVATE_FILTER;
 
-    constructor(public payload: string) { }
+    constructor(public payload: Category) { }
 }
 
-export class RemoveAction implements Action {
-    readonly type = REMOVE_FILTER;
+export class DisableAction implements Action {
+    readonly type = DISABLE_FILTER;
 
-    constructor(public payload: string) { }
+    constructor(public payload: Category) { }
 }
 
 
@@ -29,5 +29,5 @@ export class RemoveAction implements Action {
  * so that reducers can easily compose action types
  */
 export type Actions
-    = AddAction
-    | RemoveAction;
+    = ActivateAction
+    | DisableAction;
