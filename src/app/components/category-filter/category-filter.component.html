@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-12 text-center">
+  <!--<div class="col-sm-12 text-center">
     <button class="btn btn-success" type="button" (click)="disableFilter('music')"><i class="fa fa-music fa-2x"></i></button>
     <button class="btn btn-success" type="button" (click)="activateFilter('music')"><i class="fa fa-cutlery fa-2x"></i></button>
     <button class="btn btn-success" type="button"><i class="fa fa-bicycle fa-2x"></i></button>
@@ -7,5 +7,13 @@
     <button class="btn btn-success" type="button"><i class="fa fa-tree fa-2x"></i></button>
     <button class="btn btn-success" type="button"><i class="fa fa-futbol-o fa-2x"></i></button>
     <button class="btn btn-success" type="button"><i class="fa fa-gamepad fa-2x"></i></button>
+  </div>-->
+  <div class="col-sm-12 text-center">
+    <ng-container *ngFor="let filter of stateFilters">
+      <button *ngIf="filter.isActive" class="btn btn-success pointer" type="button" (click)="disableFilter(filter)">
+        <i [ngClass]="setIcon(filter.name)" class="fa fa-2x"></i></button>
+      <button *ngIf="!filter.isActive" class="btn btn-success disabled pointer" type="button" (click)="activateFilter(filter)">
+        <i [ngClass]="setIcon(filter.name)" class="fa fa-2x"></i></button>
+    </ng-container>
   </div>
 </div>

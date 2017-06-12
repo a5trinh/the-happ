@@ -35,7 +35,7 @@ export const Activities: Activity[] = [
         title: 'Some Event 5',
         location: '1 Front St E, Toronto, ON M5E 1B2',
         time: new Date("February 4, 2016 10:13"),
-        category: 'active',
+        category: 'festive',
         id: 5
     },
     {

@@ -25,7 +25,7 @@ export const initialState: State = {
         name: 'gaming',
         isActive: true
     }, {
-        name: 'active',
+        name: 'festive',
         isActive: true
     }]
 }

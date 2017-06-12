@@ -31,7 +31,7 @@
 }
 
 .pointer{
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .p-none{
