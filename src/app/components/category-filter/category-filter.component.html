@@ -1,13 +1,4 @@
 <div class="row">
-  <!--<div class="col-sm-12 text-center">
-    <button class="btn btn-success" type="button" (click)="disableFilter('music')"><i class="fa fa-music fa-2x"></i></button>
-    <button class="btn btn-success" type="button" (click)="activateFilter('music')"><i class="fa fa-cutlery fa-2x"></i></button>
-    <button class="btn btn-success" type="button"><i class="fa fa-bicycle fa-2x"></i></button>
-    <button class="btn btn-success" type="button"><i class="fa fa-shopping-bag fa-2x"></i></button>
-    <button class="btn btn-success" type="button"><i class="fa fa-tree fa-2x"></i></button>
-    <button class="btn btn-success" type="button"><i class="fa fa-futbol-o fa-2x"></i></button>
-    <button class="btn btn-success" type="button"><i class="fa fa-gamepad fa-2x"></i></button>
-  </div>-->
   <div class="col-sm-12 text-center">
     <ng-container *ngFor="let filter of stateFilters">
       <button *ngIf="filter.isActive" class="btn btn-success pointer" type="button" (click)="disableFilter(filter)">
@@ -15,5 +6,7 @@
       <button *ngIf="!filter.isActive" class="btn btn-success disabled pointer" type="button" (click)="activateFilter(filter)">
         <i [ngClass]="setIcon(filter.name)" class="fa fa-2x"></i></button>
     </ng-container>
+   <button class="btn btn-danger pointer" type="button" (click)="resetFilters()">
+        <i class="fa fa-2x fa-refresh"></i></button>
   </div>
 </div>

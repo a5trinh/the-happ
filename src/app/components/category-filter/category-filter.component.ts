@@ -28,29 +28,33 @@ export class CategoryFilterComponent {
         this.store.dispatch(new filter.DisableAction(selectedFilter))
     }
 
+    resetFilters() {
+        this.store.dispatch(new filter.ResetAction())
+    }
+
     setIcon(filterName: string): string {
         let icon = '';
         switch (filterName) {
             case 'music':
-            icon = 'fa-music';
+                icon = 'fa-music';
                 break;
             case 'dining':
-            icon = 'fa-cutlery';
+                icon = 'fa-cutlery';
                 break;
             case 'sport':
-            icon = 'fa-futbol-o';
+                icon = 'fa-futbol-o';
                 break;
             case 'outdoors':
-            icon = 'fa-tree';
+                icon = 'fa-tree';
                 break;
             case 'shopping':
-            icon = 'fa-shopping-bag';
+                icon = 'fa-shopping-bag';
                 break;
             case 'gaming':
-            icon = 'fa-gamepad';
+                icon = 'fa-gamepad';
                 break;
             case 'festive':
-            icon = 'fa-star';
+                icon = 'fa-star';
                 break;
             default:
                 icon = 'fa-star';

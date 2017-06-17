@@ -3,6 +3,7 @@ import { Category } from '../models/category';
 //action type defined string values
 export const ACTIVATE_FILTER = '[Filter] Activated';
 export const DISABLE_FILTER = '[Filter] Disabled';
+export const RESET_FILTER = '[Filter] Reset'
 
 /**
  * Every action is comprised of at least a type and an optional
@@ -23,6 +24,9 @@ export class DisableAction implements Action {
     constructor(public payload: Category) { }
 }
 
+export class ResetAction implements Action {
+    readonly type = RESET_FILTER;
+}
 
 /**
  * Export a type alias of all actions in this action group
@@ -30,4 +34,5 @@ export class DisableAction implements Action {
  */
 export type Actions
     = ActivateAction
-    | DisableAction;
+    | DisableAction
+    | ResetAction;
